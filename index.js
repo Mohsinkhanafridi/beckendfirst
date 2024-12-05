@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.get("/",(req, res)=>{
-    res.status(200).send({status:200, message:"success", data:"mohsin khan afridi"});
+    res.status(200).send("mohsin khan afridi");
 });
 
 app.use("/comments", CommentRoute);
