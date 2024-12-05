@@ -3,13 +3,13 @@ import dotenv from "dotenv";
 import CommentRoute from "./Routes/CommentsRoute.js";
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 app.get("/",(req, res)=>{
-    res.send("HELLO FROM MOHSIN");
+    res.status(200).send({status:200, message:"success", data:"mohsin khan afridi"});
 });
 
-app.use("/comment", CommentRoute);
+app.use("/comments", CommentRoute);
 
 app.listen(PORT,()=>{
     console.log(`server start with mohsin ${PORT}`)
